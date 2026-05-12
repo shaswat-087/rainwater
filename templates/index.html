@@ -39,7 +39,7 @@
   <!-- Flask POST form -->
   <form method="POST" action="/calculate">
     <input class="district" type="text" name="district" placeholder="Enter district" required><br><br>
-    Roof Type:
+    <div class="type">Roof Type:
     <select name="roofType">
       <option value="concrete">Concrete roof</option>
       <option value="tiled">Tiled roof</option>
@@ -48,6 +48,7 @@
       <option value="asphalt">Asphalt shingles</option>
       <option value="green">Green roof</option>
     </select><br><br>
+    </div>
     <input class="calculate" type="submit" value="Calculate">
   </form>
 

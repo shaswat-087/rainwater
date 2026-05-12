@@ -1,0 +1,135 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    
+    background-image: url("https://thumbs.dreamstime.com/z/innovative-smart-home-integrated-rainwater-harvesting-system-lush-landscape-cutting-edge-design-seamlessly-integrates-331444205.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* overlay color */
+  background-blend-mode: multiply; /* or overlay, darken, lighten */
+
+}
+header{
+    height: 100px;
+    background-color: #0077b6;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .icon{
+    width: 40px;
+} */
+
+.loc-box{
+    margin: 20px auto;
+    padding: 15px;
+    width: 75%;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    text-align: center;
+}
+.buttons button{
+    background: #0077b6;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.buttons button:hover{
+    background: rgb(51, 51, 201);
+}
+span{
+    display:block;
+    
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0,119,182,0.3);
+}
+.roof_details{
+    margin: 30px auto;
+    width: 75%;
+    max-width: 500px;
+    color: white; 
+   
+}
+.result{
+     background: rgb(24, 172, 172);
+}
+.result:hover{
+    background: #80c3e8;
+}
+button.calc{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+border-radius: 5px;
+color: white;
+padding: 10px;
+background: #0077b6;
+
+}
+button.calc:hover:{
+ background: rgb(51, 51, 201);
+}
+.result,.map,.estimation{
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.summary-hold{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin: 10px;
+}
+.sum-box{
+    background: #caf0f8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    height: 90%;
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+
+}
+.sum-box:hover{
+    background: rgb(24, 172, 172);
+}
+.estimation{
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #caf0f8;
+    padding :15px;
+    
+
+}
+.map{
+    background: #90e0ef;
+}
+.footer{
+    background-color:rgb(109, 109, 207);
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

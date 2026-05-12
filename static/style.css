@@ -133,7 +133,13 @@ button.calc:hover:{
     align-items: center;
 }
 
-#district{
-    width: 85%;
+.calculate{
+    width:50%;
+    margin-left: 25%;
+}
+
+.district{
+    width: 50%;
+    margin-left: 25%;
 }
 

@@ -11,7 +11,7 @@ This project estimates harvestable rainwater based on rooftop area, rainfall, an
 - Estimates annual and daily water availability
 
 #### Requirements
- pip install pandas,geopandas,flask
+ Install reuired python libraries using "pip install pandas geopandas flask" then run through the python file Rainwater.py
 
 ##### Future Improvements
 - Show reccomendations based on water avaialability

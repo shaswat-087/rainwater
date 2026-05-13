@@ -14,5 +14,5 @@ This project estimates harvestable rainwater based on rooftop area, rainfall, an
 
 #### Future Improvements
 - Show reccomendations based on water avaialability
--To show three different types of rain-water harvesting methods to the user (based on if-else logic on the amount of rain water)
+-  To show three different types of rain-water harvesting methods to the user (based on if-else logic on the amount of rain water)
 we need three distinct webpages attached to index.html through href .

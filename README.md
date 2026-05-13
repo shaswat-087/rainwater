@@ -10,9 +10,10 @@ This project estimates harvestable rainwater based on rooftop area, rainfall, an
 - Uses district rainfall data
 - Estimates annual and daily water availability
 
+#### Requirements
+ pip install pandas,geopandas,flask
 
-
-#### Future Improvements
+##### Future Improvements
 - Show reccomendations based on water avaialability
 -  To show three different types of rain-water harvesting methods to the user (based on if-else logic on the amount of rain water)
 we need three distinct webpages attached to index.html through href .

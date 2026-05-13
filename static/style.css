@@ -17,6 +17,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
 }
 /* .icon{
     width: 40px;
@@ -126,6 +127,10 @@ button.calc:hover:{
     background: #90e0ef;
 }
 .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-top: 30px auto;
     background-color:rgb(109, 109, 207);
     height: 50px;
     width: 100%;
@@ -137,8 +142,10 @@ button.calc:hover:{
 .calculate{
     width:25%;
     margin-left: 37.5%;
+    background-color:#128fd2;
+    color: white;
+    font-size: 16px;
 }
-
 .district{
     width: 25%;
     margin-left: 37.5%;

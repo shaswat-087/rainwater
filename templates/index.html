@@ -13,31 +13,24 @@
     <h1>SMART RAINWATER HARVESTING SYSTEM</h1>
     <p class="ehc">Estimate . Harvest . Conserve</p>
   </header>
+  
+   
 
-  <div class="loc-box">
-    <p>Allow us to access your location</p>
-    <div class="buttons">
-      <button class="allow">ALLOW</button>
-      <button class="deny">DENY</button>
-    </div>
-  </div>
-
+  <form method="POST" action="/calculate">
   <div class="roof_details">
     <h2>Rooftop Details</h2>
-    <span>Length (Meter)</span>
-    <input type="number" id="Length" placeholder="Enter Length">
-    <span>Width (Meter)</span>
-    <input type="number" id="Width" placeholder="Enter Width">
-    <button class="calc">Calculate Area</button>
+    
+    <label for="Length">Length (Meter)</label>
+    <input type="number" id="Length" name="Length" placeholder="Enter Length" required>
+    
+    <label for="Width">Width (Meter)</label>
+    <input type="number" id="Width" name="Width" placeholder="Enter Width" required>
   </div>
 
-  <section class="result">
-    <h2>Rooftop Area</h2>
-    <p id="area">Calculated Area : 0.00 sq-meter</p>
-  </section>
+  
 
-  <!-- Flask POST form -->
-  <form method="POST" action="/calculate">
+
+    
     <input class="district" type="text" name="district" placeholder="Enter district" required><br><br>
     <div class="type"> <span>Roof Type</span>:
     <select name="roofType">
@@ -51,7 +44,10 @@
     </div>
     <input class="calculate" type="submit" value="Submit">
   </form>
-
+   <section class="result">
+    <h2>Rooftop Area</h2>
+    <p id="area">Calculated Area : {{area}} sq-meter</p>
+    </section>
   <section class="estimation">
     <h2>Rainwater Harvesting Estimation</h2>
     <div class="summary-hold">

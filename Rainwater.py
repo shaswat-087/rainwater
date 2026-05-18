@@ -23,6 +23,12 @@ app=Flask(__name__)
 
 def index():
     return render_template('index.html')
+@app.route('/modular')
+def modular():
+    return render_template('modular.html')
+@app.route('/rooftop')
+def rooftop():
+    return render_template('rooftop.html')
 
 @app.route('/calculate', methods=['POST'])
 

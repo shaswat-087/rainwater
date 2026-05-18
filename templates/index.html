@@ -66,15 +66,20 @@
     </div>
   </section>
   <div class="recommend">
-    
-    {% if rainfall is not none and rainfall >= 600 and rainfall <=900 %}
-        <a href="{{ url_for('modular') }}"><button>View Recommendations</button></a>
-    {% elif rainfall is not none and rainfall >= 900 and rainfall <=1200 %}
-        <a href="{{ url_for('rooftop') }}"><button>View Recommendations</button></a>
-    {% elif rainfall is not none and rainfall>=0 and rainfall <=600 %}
-         <a href="{{ url_for('groundwater') }}"><button>View Recommendations</button></a>
-    {% endif %}
-    </div>
+    <a 
+      href="{% if rainfall is not none and rainfall >= 600 and rainfall <=900 %}
+                {{ url_for('modular') }}
+             {% elif rainfall is not none and rainfall >= 900 and rainfall <=1200 %}
+                {{ url_for('rooftop') }}
+             {% elif rainfall is not none and rainfall>=0 and rainfall <=600 %}
+                {{ url_for('groundwater') }}
+             {% else %}
+                #
+             {% endif %}" 
+      class="recommend-link">
+        <button class="recommend-btn">View Recommendations</button>
+    </a>
+   </div>
 
 
   <div class="footer">

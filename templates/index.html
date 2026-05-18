@@ -67,11 +67,12 @@
   </section>
   <div class="recommend">
     
-    {%if rainfall >= 600 and rainfall < 900 %}
+    {% if rainfall is not none and rainfall >= 600 and rainfall <=900 %}
         <a href="{{ url_for('modular') }}"><button>View Recommendations</button></a>
-    {% elif rainfall >= 900 and rainfall < 1200 %}
+    {% elif rainfall is not none and rainfall >= 900 and rainfall <=1200 %}
         <a href="{{ url_for('rooftop') }}"><button>View Recommendations</button></a>
-    
+    {% elif rainfall is not none and rainfall>=0 and rainfall <=600 %}
+         <a href="{{ url_for('groundwater') }}"><button>View Recommendations</button></a>
     {% endif %}
     </div>
 

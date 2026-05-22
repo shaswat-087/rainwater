@@ -1,23 +1,22 @@
 import geopandas as gpd
 import pandas as pd
+from flask import Flask, render_template,request
 
-rain=gpd.read_file(r"Rain_Data.csv")
+rain = gpd.read_file(r"Rain_Data.csv")
 rain['ANNUAL'] = pd.to_numeric(rain['ANNUAL'], errors='coerce')
 
 pd.set_option("display.max_rows", None)
 
-coefficients = {
-        "concrete" : 0.85,
-        "tiled" : 0.75,
-        "corrugated" : 0.80, 
-        "thatched" : 0.55,
-        "asphalt" : 0.70,
-        "green" : 0.50
-    }
+coefficients = {                                          #stores run-off coefficients for every root-top surface
+    "concrete" : 0.8475,
+    "tiled" : 0.7620,
+    "corrugated" : 0.8125,
+    "thatched" : 0.5480,
+    "asphalt" : 0.7015,
+    "green" : 0.5035
+}
 
-
-from flask import Flask, render_template,request
-
+#flask part
 app = Flask(__name__)
 @app.route("/")
 
@@ -41,19 +40,27 @@ def calculate():
    rooftype = request.form.get('roofType')
 
    try:
-        area = float(length) * float(width)
-   except (TypeError, ValueError):
-        area = 0.0
+    area = float(length) * float(width)
+    if area <= 0:
+        return render_template(
+            'index.html',
+            error="Invalid dimensions"
+        )
+    except (TypeError, ValueError):
+            return render_template(
+                'index.html',
+                error="Please enter valid numeric values"
+            )
 
    district_row = rain[rain['DISTRICT'].str.lower() == district.lower()]
    if not district_row.empty:
-        rainfall = float(district_row.iloc[0]['ANNUAL'])  # rainfall value from CSV
+        rainfall = float(district_row.iloc[0]['ANNUAL'])  # rainfall value from source file (CSV)
    else:
         rainfall = 1200  # fallback default (mm annually)
 
 
    coeff = coefficients.get(rooftype, 0.75)
-   harvest_L = area * rainfall * coeff   #in mm^3 which is equal to litres
+   harvest_L = area * rainfall * coeff   #in litres
    daily = harvest_L / 365
 
    return render_template(

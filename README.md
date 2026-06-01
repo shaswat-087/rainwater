@@ -10,15 +10,24 @@ This project estimates harvestable rainwater based on rooftop area, rainfall, an
 - Uses district rainfall data
 - Estimates annual and daily water availability
 
-#### Dependencies
+
+
+
+## 🛠️ Dependencies
 Install the following Python packages before running the app:
 
+```bash
 pip install flask pandas geopandas
+```
 
- 
-##### Browser Address
+---
+
+## 🌐 Browser Address
 Once the app is running, open:
 
-Code
+```
 http://127.0.0.1:5000/
+```
+
+---
 

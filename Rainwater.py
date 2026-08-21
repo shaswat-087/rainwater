@@ -2,7 +2,7 @@ import geopandas as gpd
 import pandas as pd
 from flask import Flask, render_template,request
 
-rain = gpd.read_file("rain_Data.csv")
+rain = gpd.read_file("Rain_Data.csv")
 rain['ANNUAL'] = pd.to_numeric(rain['ANNUAL'], errors='coerce')
 
 pd.set_option("display.max_rows", None)
